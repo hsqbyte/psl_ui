@@ -1,11 +1,18 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { protocols, layers, layerLabels } from '@/data/protocols'
+import { useProtocols } from '@/hooks/use-protocols'
+import { type ProtocolMeta } from '@/lib/psl'
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Input } from '@/components/ui/input'
 import { useI18n } from '@/i18n'
+
+const layers = ['link', 'network', 'transport', 'application'] as const
+
+const layerLabels: Record<string, string> = {
+  link: '链路层', network: '网络层', transport: '传输层', application: '应用层',
+}
 
 const layerColors: Record<string, string> = {
   link: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
@@ -16,14 +23,20 @@ const layerColors: Record<string, string> = {
 
 export function Home() {
   const [query, setQuery] = useState('')
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
+  const { protocols, loading, error } = useProtocols()
+
+  if (loading) return <p className="text-muted-foreground py-8">Loading WASM engine...</p>
+  if (error) return <p className="text-red-500 py-8">Error: {error}</p>
+
+  const getDesc = (p: ProtocolMeta) => p.description?.[lang] || p.description?.en || ''
 
   const filtered = protocols.filter((p) => {
     if (!query) return true
     const q = query.toLowerCase()
     return (
       p.name.toLowerCase().includes(q) ||
-      p.description.toLowerCase().includes(q) ||
+      getDesc(p).toLowerCase().includes(q) ||
       (p.rfc && p.rfc.toLowerCase().includes(q))
     )
   })
@@ -48,11 +61,11 @@ export function Home() {
           ))}
         </TabsList>
         <TabsContent value="all">
-          <ProtocolGrid protocols={filtered} noResults={t('noResults')} />
+          <ProtocolGrid protocols={filtered} lang={lang} noResults={t('noResults')} />
         </TabsContent>
         {layers.map((l) => (
           <TabsContent key={l} value={l}>
-            <ProtocolGrid protocols={filtered.filter((p) => p.layer === l)} noResults={t('noResults')} />
+            <ProtocolGrid protocols={filtered.filter((p) => p.layer === l)} lang={lang} noResults={t('noResults')} />
           </TabsContent>
         ))}
       </Tabs>
@@ -60,24 +73,28 @@ export function Home() {
   )
 }
 
-function ProtocolGrid({ protocols: items, noResults }: { protocols: typeof protocols; noResults: string }) {
+function ProtocolGrid({ protocols: items, lang, noResults }: { protocols: ProtocolMeta[]; lang: string; noResults: string }) {
   if (items.length === 0) return <p className="text-muted-foreground py-8">{noResults}</p>
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-      {items.map((p) => (
-        <Link key={p.name} to={`/protocol/${p.name}`}>
-          <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
-            <CardHeader>
-              <div className="flex items-center justify-between">
-                <CardTitle className="text-base">{p.name}</CardTitle>
-                <Badge variant="secondary" className={layerColors[p.layer]}>{layerLabels[p.layer]}</Badge>
-              </div>
-              <CardDescription>{p.description}</CardDescription>
-              {p.rfc && <span className="text-xs text-muted-foreground">{p.rfc}</span>}
-            </CardHeader>
-          </Card>
-        </Link>
-      ))}
+      {items.map((p) => {
+        const desc = p.description?.[lang] || p.description?.en || ''
+        const layer = p.layer || ''
+        return (
+          <Link key={p.name} to={`/protocol/${p.name}`}>
+            <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-base">{p.name}</CardTitle>
+                  {layer && <Badge variant="secondary" className={layerColors[layer]}>{layerLabels[layer] || layer}</Badge>}
+                </div>
+                <CardDescription>{desc}</CardDescription>
+                {p.rfc && <span className="text-xs text-muted-foreground">{p.rfc}</span>}
+              </CardHeader>
+            </Card>
+          </Link>
+        )
+      })}
     </div>
   )
 }
