@@ -1,6 +1,6 @@
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { useI18n } from '@/i18n'
+import { Card, CardContent } from '@/shared/ui/card'
+import { Badge } from '@/shared/ui/badge'
+import { useI18n } from '@/shared/i18n'
 
 const tutorials = [
   { title: 'Getting Started with PSL', level: 'beginner', duration: '15 min', steps: 5, completed: 5 },

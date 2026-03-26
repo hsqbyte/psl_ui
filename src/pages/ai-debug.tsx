@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Badge } from '@/shared/ui/badge'
+import { useI18n } from '@/shared/i18n'
 
 const errors = [
   { error: 'Field overflow at byte 14', analysis: 'uint8 field exceeds max value 255', fix: 'Change to uint16', confidence: 95 },

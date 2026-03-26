@@ -2,7 +2,7 @@
  * PSL WASM bridge — loads protospec-wasm and exposes protocol operations.
  *
  * Usage:
- *   import { initPSL, psl } from '@/lib/psl'
+ *   import { initPSL, psl } from '@/shared/lib/psl'
  *   await initPSL()
  *   const protocols = psl.listProtocols()
  */

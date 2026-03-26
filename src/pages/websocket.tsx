@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Badge } from '@/shared/ui/badge'
+import { Button } from '@/shared/ui/button'
+import { useI18n } from '@/shared/i18n'
 
 const mockMessages = [
   { id: 1, dir: 'in', ts: '14:30:01', data: '{"type":"subscribe","channel":"tcp"}' },

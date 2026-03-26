@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { useI18n } from '@/shared/i18n'
 
 const TIMELINE_DATA = [
   { name: 'Ethernet', year: 1980, rfc: 'RFC 894', detail: 'DIX Ethernet II standard' },

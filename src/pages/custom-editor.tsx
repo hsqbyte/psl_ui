@@ -1,8 +1,8 @@
 import { useState, useCallback } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Input } from '@/shared/ui/input'
+import { Button } from '@/shared/ui/button'
+import { useI18n } from '@/shared/i18n'
 
 interface Field {
   id: number

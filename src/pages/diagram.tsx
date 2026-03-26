@@ -1,9 +1,9 @@
 import { useParams, Link } from 'react-router-dom'
-import { protocols } from '@/data/protocols'
-import { Badge } from '@/components/ui/badge'
-import { ExportButton } from '@/components/export-button'
-import { useI18n } from '@/i18n'
-import type { ProtocolField } from '@/data/protocols'
+import { protocols } from '@/entities/protocol/model'
+import { Badge } from '@/shared/ui/badge'
+import { ExportButton } from '@/features/codec/export-button'
+import { useI18n } from '@/shared/i18n'
+import type { ProtocolField } from '@/entities/protocol/model'
 
 function generateDiagram(fields: ProtocolField[]): string {
   const COLS = 32

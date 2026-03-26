@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Badge } from '@/shared/ui/badge'
+import { useI18n } from '@/shared/i18n'
 
 const logs = [
   { ts: '2024-01-15 14:30', user: 'alice', action: 'edit', target: 'TCP protocol', ip: '10.0.0.1' },

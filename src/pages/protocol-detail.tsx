@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { protocols, layerLabels } from '@/data/protocols'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ExportButton } from '@/components/export-button'
-import { ShareDialog } from '@/components/share-dialog'
+import { protocols, layerLabels } from '@/entities/protocol/model'
+import { Badge } from '@/shared/ui/badge'
+import { Button } from '@/shared/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { ExportButton } from '@/features/codec/export-button'
+import { ShareDialog } from '@/features/codec/share-dialog'
 import { toggleBookmark, isBookmarked } from '@/pages/bookmarks'
-import { useI18n } from '@/i18n'
+import { useI18n } from '@/shared/i18n'
 
 const layerColors: Record<string, string> = {
   link: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',

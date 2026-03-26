@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useProtocols } from '@/hooks/use-protocols'
-import { type ProtocolMeta } from '@/lib/psl'
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Input } from '@/components/ui/input'
-import { useI18n } from '@/i18n'
+import { useProtocols } from '@/entities/protocol/use-protocols'
+import { type ProtocolMeta } from '@/shared/lib/psl'
+import { Card, CardHeader, CardTitle, CardDescription } from '@/shared/ui/card'
+import { Badge } from '@/shared/ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/shared/ui/tabs'
+import { Input } from '@/shared/ui/input'
+import { useI18n } from '@/shared/i18n'
 
 const layers = ['link', 'network', 'transport', 'application'] as const
 

@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Badge } from '@/shared/ui/badge'
+import { useI18n } from '@/shared/i18n'
 
 const providers = [
   { name: 'SAML 2.0', status: 'configured', issuer: 'https://idp.example.com' },

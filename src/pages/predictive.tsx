@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Badge } from '@/shared/ui/badge'
+import { useI18n } from '@/shared/i18n'
 
 const predictions = [
   { metric: 'Traffic Volume', current: '2.4 Gbps', predicted: '3.1 Gbps', timeframe: '7 days', trend: 'up' },

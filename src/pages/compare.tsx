@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { protocols } from '@/data/protocols'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Label } from '@/components/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Badge } from '@/components/ui/badge'
-import { useI18n } from '@/i18n'
+import { protocols } from '@/entities/protocol/model'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Label } from '@/shared/ui/label'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select'
+import { Badge } from '@/shared/ui/badge'
+import { useI18n } from '@/shared/i18n'
 
 export function Compare() {
   const { t } = useI18n()

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { protocols } from '@/data/protocols'
-import { Button } from '@/components/ui/button'
-import { useI18n } from '@/i18n'
+import { protocols } from '@/entities/protocol/model'
+import { Button } from '@/shared/ui/button'
+import { useI18n } from '@/shared/i18n'
 
 interface TreeNode {
   name: string

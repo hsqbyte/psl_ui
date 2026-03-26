@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { protocols } from '@/data/protocols'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { protocols } from '@/entities/protocol/model'
+import { useI18n } from '@/shared/i18n'
 
 const LAYER_Y: Record<string, number> = { link: 60, network: 160, transport: 260, application: 360 }
 

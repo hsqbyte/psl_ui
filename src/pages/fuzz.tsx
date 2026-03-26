@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { protocols } from '@/data/protocols'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Button } from '@/shared/ui/button'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select'
+import { protocols } from '@/entities/protocol/model'
+import { useI18n } from '@/shared/i18n'
 
 interface FuzzResult { id: number; input: string; status: 'ok' | 'crash' | 'timeout' }
 

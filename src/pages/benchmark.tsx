@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { useI18n } from '@/shared/i18n'
 
 const BENCH_DATA = [
   { name: 'Ethernet', encode: 1250000, decode: 1480000 },

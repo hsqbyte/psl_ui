@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Button } from '@/shared/ui/button'
+import { useI18n } from '@/shared/i18n'
 
 const langs: Record<string, string> = {
   Go: `import "github.com/psl-lang/psl-go"\n\nclient := psl.NewClient("localhost:8080")\nprotos, _ := client.ListProtocols()\nfor _, p := range protos {\n  fmt.Println(p.Name)\n}`,

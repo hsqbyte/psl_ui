@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Dialog as SheetPrimitive } from "@base-ui/react/dialog"
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "@/shared/lib/utils"
+import { Button } from "@/shared/ui/button"
 import { FiX } from "react-icons/fi"
 
 function Sheet({ ...props }: SheetPrimitive.Root.Props) {

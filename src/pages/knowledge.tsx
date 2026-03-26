@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { useI18n } from '@/shared/i18n'
 
 type EdgeType = 'depends_on' | 'extends' | 'related_to'
 

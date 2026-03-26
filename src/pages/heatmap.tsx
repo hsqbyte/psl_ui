@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { useI18n } from '@/shared/i18n'
 
 const protocols = ['TCP', 'UDP', 'HTTP', 'DNS', 'TLS', 'MQTT', 'QUIC']
 const hours = ['00', '04', '08', '12', '16', '20']

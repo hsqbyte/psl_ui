@@ -1,8 +1,8 @@
 import { useState, useRef } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { protocols } from '@/data/protocols'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Button } from '@/shared/ui/button'
+import { protocols } from '@/entities/protocol/model'
+import { useI18n } from '@/shared/i18n'
 
 export function ImportExport() {
   const { t } = useI18n()

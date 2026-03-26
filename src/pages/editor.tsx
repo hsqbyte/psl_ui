@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { useI18n } from '@/i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card'
+import { Button } from '@/shared/ui/button'
+import { useI18n } from '@/shared/i18n'
 
 const KEYWORDS = ['protocol', 'field', 'message', 'transport', 'enum', 'option', 'import', 'version']
 const TYPES = ['uint8', 'uint16', 'uint32', 'uint64', 'int8', 'int16', 'int32', 'int64', 'bytes', 'string', 'bool']

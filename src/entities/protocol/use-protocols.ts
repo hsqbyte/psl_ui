@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { initPSL, psl, type ProtocolMeta } from '@/lib/psl'
+import { initPSL, psl, type ProtocolMeta } from '@/shared/lib/psl'
 
 export function useProtocols() {
   const [protocols, setProtocols] = useState<ProtocolMeta[]>([])

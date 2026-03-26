@@ -4,12 +4,12 @@ import {
   SidebarProvider, Sidebar, SidebarContent, SidebarHeader, SidebarMenu,
   SidebarMenuItem, SidebarMenuButton, SidebarGroup, SidebarGroupLabel,
   SidebarGroupContent, SidebarInset, SidebarTrigger,
-} from '@/components/ui/sidebar'
-import { Separator } from '@/components/ui/separator'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { Button } from '@/components/ui/button'
-import { useTheme } from '@/hooks/use-theme'
-import { useI18n } from '@/i18n'
+} from '@/shared/ui/sidebar'
+import { Separator } from '@/shared/ui/separator'
+import { TooltipProvider } from '@/shared/ui/tooltip'
+import { Button } from '@/shared/ui/button'
+import { useTheme } from '@/shared/hooks/use-theme'
+import { useI18n } from '@/shared/i18n'
 import {
   VscListFlat, VscListTree, VscGraph, VscBeaker, VscEdit, VscPackage,
   VscGitCompare, VscSymbolNumeric, VscArrowSwap, VscPieChart,
