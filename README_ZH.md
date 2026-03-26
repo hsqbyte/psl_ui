@@ -16,6 +16,12 @@
 
 PSL UI 是 [protospec](https://github.com/hsqbyte/protospec) 项目的 Web 前端。它提供了一种交互式方式来浏览协议库——浏览协议层级、查看字段定义、编解码数据包以及可视化协议结构。
 
+## 截图
+
+<p align="center">
+  <img src="assets/screenshot.png" alt="PSL UI 截图">
+</p>
+
 ## 功能
 
 - **协议浏览器** — 以层级树形结构浏览协议栈（Ethernet > IPv4 > TCP > HTTP）

@@ -16,6 +16,12 @@
 
 PSL UI is a web-based frontend for the [protospec](https://github.com/hsqbyte/protospec) project. It provides an interactive way to explore the protocol library — browsing the protocol hierarchy, viewing field definitions, encoding/decoding packets, and visualizing protocol structures.
 
+## Screenshot
+
+<p align="center">
+  <img src="assets/screenshot.png" alt="PSL UI Screenshot">
+</p>
+
 ## Features
 
 - **Protocol Browser** — Navigate protocols in a hierarchical tree reflecting the protocol stack (Ethernet > IPv4 > TCP > HTTP)
